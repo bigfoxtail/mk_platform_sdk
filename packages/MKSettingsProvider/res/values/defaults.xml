@@ -119,4 +119,6 @@
     -->
     <string name="def_enabled_event_lls_components"></string>
 
+    <bool name="def_adb_notify">false</bool>
+
 </resources>

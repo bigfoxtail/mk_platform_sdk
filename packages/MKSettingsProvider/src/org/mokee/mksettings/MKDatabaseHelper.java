@@ -393,6 +393,9 @@ public class MKDatabaseHelper extends SQLiteOpenHelper{
             final String provisionedFlag = Settings.Global.getString(mContext.getContentResolver(),
                     Settings.Global.DEVICE_PROVISIONED);
             loadSetting(stmt, MKSettings.Secure.MK_SETUP_WIZARD_COMPLETED, provisionedFlag);
+
+            loadBooleanSetting(stmt, MKSettings.Secure.ADB_NOTIFY,
+                    R.bool.def_adb_notify);
         } finally {
             if (stmt != null) stmt.close();
         }
